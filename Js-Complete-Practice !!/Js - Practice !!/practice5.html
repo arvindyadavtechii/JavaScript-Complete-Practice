@@ -1,0 +1,155 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: black;
+            padding: 8px;
+            height: 140px;
+            border-radius: 4px;
+        }
+
+        .duration {
+            background-color: black;
+            border-radius: 5px;
+            padding: 2px;
+            color: white;
+            position: absolute;
+            top: 130px;
+            left: 218px;
+            opacity: 0.8;
+        }
+
+        .img>img {
+            border-radius: 10px;
+        }
+
+        .title {
+            font-size: 25px;
+            font-weight: 600;
+            margin: 6px;
+            color: white;
+        }
+
+        .details {
+            color: gray;
+            font-size: 15px;
+            margin: 6px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+            <img class="image" src="" alt="">
+            <div class="duration">32:22</div>
+        </div>
+
+        <div class="others">
+            <div class="title"></div>
+            <div class="details"></div>
+        </div>
+    </div>
+    <script>
+        function createCard(title, cName, views, monthsOld, duration, thumbnail) {
+            document.querySelector(".duration").innerHTML = duration;
+            document.querySelector(".title").innerHTML = title;
+            if (views >= 1000000) views = views / 1000000 + "M";
+            else if (views >= 1000) views = views / 1000 + "K";
+            document.querySelector(".details").innerHTML = cName + " . " + views + " views . " + monthsOld + " months ago";
+            document.querySelector(".image").src = thumbnail;
+        }
+        createCard("Introduction to Backend | Sigma Web Dev veido #2", "CodeWithHarry", 560000, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw"); 
+    </script>
+</body>
+
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<style>
+    .card{
+        display: flex;
+        border: 1px solid black;
+        width: 80vw;
+        padding: 20px;
+        margin-bottom:10px ;
+    }
+    .text h {
+        padding: 20px;
+    }
+    .image{
+        padding-right: 10px;
+        position: relative;
+    }
+    .capsule{
+        position: absolute;
+        bottom: 4px;
+        z-index: 10;
+        right:5px;
+        background-color: rgb(11, 12, 12);
+        opacity: 0.9;
+        color: white;
+        padding: 3px;
+        border-radius: 3px;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw" alt="">
+            <div class="capsule">31.06</div>
+        </div>
+            <div class="text">
+                <h1>Introduction to Backend | sigma web dev vedio #2</h1>
+                <p>CodeWithHarry  .  727k veiws  .2 months ago</p>
+            </div>
+        </div>
+    </div>
+    <script>
+function createcard(title, cname, views, monthsold, duration, thumbnail){
+    //finish this function
+    let viewstr;
+    if (views<1000){
+        viewstr = views;
+    }
+    else if(views>1000000){
+        viewstr = views/1000000 + "M";
+    }
+    else{
+        viewstr = views/1000 + "K";
+    }
+
+    let html = `<div class="card">
+            <div class="image">
+                <img src="${thumbnail}" alt="">
+           <div class="capsule">${duration}</div>
+                </div>
+            <div class="text">
+                <h1>${title}</h1>
+                <p>${cname}  .  ${viewstr} views . ${monthsold} months ago</p>
+            </div>
+        </div>`
+        document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML + html;
+
+}
+createcard("Introduction to Backend | sigma web dev vedio #2" , "CodeWithHarry" , 5600000, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw");
+</script>
+</body>
+</html>

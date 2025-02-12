@@ -1,0 +1,336 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackers Terminal</title>
+    <style>
+        body {
+            background-color: black;
+            color: limegreen;
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .terminal {
+            background: linear-gradient(to right, #002b36, black);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .blinking-dots span {
+            animation: blink 1.5s steps(1) infinite;
+        }
+
+        .blinking-dots span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .blinking-dots span:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .blinking-dots span:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="terminal">
+        <pre id="output"></pre>
+    </div>
+    <script>
+        const messages = [
+            "Initializing Hacking",
+            "Reading your Files",
+            "Password files Detected",
+            "Sending all Passwords and Personal files to server",
+            "Cleaning up"
+        ];
+
+        let index = 0;
+
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function showMessage() {
+            if (index < messages.length) {
+                const output = document.getElementById('output');
+                const message = messages[index];
+                output.innerHTML += `<div>${message}<span class="blinking-dots"><span>.</span><span>.</span><span>.</span></span></div>`;
+                index++;
+                await delay(Math.random() * 6000 + 1000);
+                showMessage();
+            }
+        }
+
+        showMessage();
+    </script>
+</body>
+
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacking terminal</title>
+</head>
+<style>
+  p{
+    color: green;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .body{
+    background-color: black;
+    
+  }
+  .container{
+   border: 2px solid green;
+   width: 1500px;
+   height: 600px;
+   margin-left: 10px;
+  }
+  .main-terminal{
+            margin: 10px;
+            width: 100%;
+            height: 100%;
+            color: rgb(3, 219, 3);
+            display: flex;
+            flex-direction: column;
+            font-size:large ;
+        }
+ 
+</style>
+<body class="body">
+  <p>Welcome to Hacker Site</p>
+  <div class="container">
+    <div class="main-terminal" id="terminal">
+
+    </div>
+  </div>
+  <script>
+    let terminal = document.getElementById("terminal");
+
+async function hack() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let ini = document.createElement("span");
+      ini.innerHTML = "Initializing Hacking"
+      terminal.appendChild(ini);
+
+      setTimeout(() => {
+        ini.appendChild(document.createTextNode("."));
+      }, 900);
+
+      setTimeout(() => {
+        ini.appendChild(document.createTextNode("."));
+      }, 1400);
+
+      setTimeout(() => {
+        ini.appendChild(document.createTextNode("."));
+      }, 1900);
+    }, 1000);
+
+    setTimeout(() => {
+      let next = document.createElement("span");
+      next.innerHTML = "Reading your File"
+      terminal.appendChild(next);
+
+      setTimeout(() => {
+        next.appendChild(document.createTextNode("."));
+      }, 900);
+
+      setTimeout(() => {
+        next.appendChild(document.createTextNode("."));
+      }, 1400);
+
+      setTimeout(() => {
+        next.appendChild(document.createTextNode("."));
+      }, 1900);
+    }, 4000);
+
+    setTimeout(() => {
+      let mid = document.createElement("span");
+      mid.innerHTML = "Password File Detected"
+      terminal.appendChild(mid);
+
+      setTimeout(() => {
+        mid.appendChild(document.createTextNode("."));
+      }, 900);
+
+      setTimeout(() => {
+        mid.appendChild(document.createTextNode("."));
+      }, 1400);
+
+      setTimeout(() => {
+        mid.appendChild(document.createTextNode("."));
+      }, 1900);
+    }, 7000);
+
+    setTimeout(() => {
+      let last = document.createElement("span");
+      last.innerHTML = "sending all password and file to server"
+      terminal.appendChild(last);
+
+      setTimeout(() => {
+        last.appendChild(document.createTextNode("."));
+      }, 900);
+
+      setTimeout(() => {
+        last.appendChild(document.createTextNode("."));
+      }, 1400);
+
+      setTimeout(() => {
+        last.appendChild(document.createTextNode("."));
+      }, 1900);
+    }, 10000);
+
+    setTimeout(() => {
+      let end = document.createElement("span");
+      end.innerHTML = "cleaning up your file"
+      terminal.appendChild(end);
+
+      setTimeout(() => {
+        end.appendChild(document.createTextNode("."));
+      }, 900);
+
+      setTimeout(() => {
+        end.appendChild(document.createTextNode("."));
+      }, 1400);
+
+      setTimeout(() => {
+        end.appendChild(document.createTextNode("."));
+      }, 1900);
+    }, 13000);
+
+    setTimeout(() => {
+      resolve();
+    }, 13000);
+  });
+}
+
+async function main() {
+  await hack();
+  
+  setTimeout(() => {
+   document.querySelector(".body").style.backgroundImage = "url('https://miro.medium.com/v2/resize:fit:1400/1*JAoYVcvkzbFKi652Pt_1yQ.gif')";
+ }, 3500);
+
+}
+
+main();
+  </script>
+ 
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Poppins:wght@300;400;700&display=swap');
+
+        body {
+            background-color: green;
+            color: white;
+            font-family: 'Martel Sans', sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds 
+    
+    Initializing Hacking...
+    Reading your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server...
+    Cleaning up...
+
+    The three dots must blink so that it looks like a real terminal
+    -->
+    <div>Initializing Hacking...</div>
+    <script>
+
+
+
+        const addItem = async (item) => {
+            await randomDelay();
+            let div = document.createElement("div");
+            div.innerHTML = item;
+            document.body.append(div)
+        }
+
+        const randomDelay = () => {
+            return new Promise((resolve, reject) => {
+                timeout = 1 + 6 * Math.random();
+                setTimeout(() => {
+                    resolve()
+                }, timeout * 1000);
+            })
+        }
+
+        async function main() {
+
+
+            let t = setInterval(() => {
+                let last = document.body.getElementsByTagName("div");
+                last = last[last.length - 1]
+                if(last.innerHTML.endsWith("...")){
+                    last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length-3)
+                }
+                else{
+
+                    last.innerHTML = last.innerHTML + "."
+                }
+
+            }, 100);
+
+
+            let text = ["Initialized Hacking now reading your data",
+                "Reading your Files",
+                "Password files Detected",
+                "Sending all passwords and personal files to server",
+                "Cleaning up"]
+
+            for (const item of text) {
+                await addItem(item)
+            }
+
+            await randomDelay()
+            clearInterval(t)
+            
+        }
+        main()
+
+
+    </script>
+</body>
+
+</html>

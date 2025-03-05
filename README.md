@@ -60,11 +60,11 @@ API Integration (Fetch, Axios)
 ## 🚀 How to Use this Repository
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/arvindyadavtechii/JavaScript-Complete-Practice-.git
+   git clone https://github.com/arvindyadavtechii/JavaScript-Complete-Practice.git
 
 2. **Navigate to the specific project folder**:
    ```bash
-   cd JavaScript-Complete-Practice-/project-name
+   cd JavaScript-Complete-Practice
 Open the index.html file in your browser to view the project.
 
 ---
